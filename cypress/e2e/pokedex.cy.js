@@ -6,4 +6,9 @@ describe('Pokedex', function () {
       'Pokémon and Pokémon character names are trademarks of Nintendo.'
     )
   })
+  it('Venusaur detail page can be opened', function () {
+    cy.visit('http://localhost:5000/')
+    cy.get('a').eq(2).click()
+    cy.contains('chlorophyll')
+  })
 })
